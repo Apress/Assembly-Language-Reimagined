@@ -1,6 +1,6 @@
 Change .release to release throughout the book. 
 
-Change .debug to debug throughout the book. 
+Change .debug to debug throughout the book.
 
 Page 5     Change The build and release targets to The release and debug targets. 
 
