@@ -4,25 +4,25 @@
 # 	John Schwartzman, Forte Systems, Inc.
 # 	04/06/2023
 #
-#	Commands:  make [.release], make fdebug, make clean
+#	Commands:  make [release], make debug, make clean
 #   Requires:  ../maketest.sh
 #
 #############################################################################
 PROG  := hello
 SHELL := /bin/bash
 
-.release: $(PROG).asm Makefile
-	@source ../maketest.sh && test .release .debug
+release: $(PROG).asm Makefile
+	@source ../maketest.sh && test release debug
 	yasm -f elf64 -o $(PROG).obj $(PROG).asm	# assemble
 	ld $(PROG).obj -o $(PROG)					# link
 	gcc -O3 $(PROG).c	# compile and link C version (a.out)
 
-.debug: $(PROG).asm Makefile
-	@source ../maketest.sh && test .debug .release
+debug: $(PROG).asm Makefile
+	@source ../maketest.sh && test debug release
 	yasm -f elf64 -g dwarf2 -o $(PROG).obj $(PROG).asm	# assemble
 	ld -g $(PROG).obj -o $(PROG)	# link
 	gcc -g $(PROG).c				# compile and link C version (a.out)
 
 clean:
-	rm -f $(PROG) $(PROG).obj a.out .debug .release
+	rm -f $(PROG) $(PROG).obj a.out debug release
 #############################################################################
