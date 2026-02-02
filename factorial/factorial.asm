@@ -2,7 +2,7 @@
 ; factorial.asm
 ; John Schwartzman, Forte Systems, Inc.
 ; 05/28/2023
-; Linux x86_64
+; Linux x64
 ;
 ;============================ CONSTANT DEFINITIONS ==========================
 LF				equ 	 10			; ASCII linefeed character
