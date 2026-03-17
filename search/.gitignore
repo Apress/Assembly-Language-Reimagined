@@ -1,9 +1,0 @@
-#.gitignore
-.release
-.debug
-*.obj
-.vscode/
-arrayToolsStr.asm
-a.out
-testStr1
-testStr2

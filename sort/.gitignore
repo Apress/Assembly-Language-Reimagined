@@ -1,6 +1,0 @@
-#.gitignore
-.release
-.debug
-*.obj
-arrayToolsStr.asm
-a.out

@@ -4,13 +4,14 @@
 # 	John Schwartzman, Forte Systems, Inc.
 # 	05/16/2019
 #
-#	Commands:  make .release, make .debug, make clean, make install
+#	Commands:  make release, make debug, make clean
+#			   make = make release
 #
 #############################################################################
-SUBDIRS := ./$(wildcard */.)
+SUBDIRS := $(wildcard */.)
 SHELL   := /bin/bash
 
-.PHONEY: clean .debug .release
+.phony: clean
 
 define submake
 	@for dir in $(SUBDIRS);					\
@@ -20,18 +21,15 @@ define submake
 	done
 endef
 
-.release:
-	$(call submake, .release)
+release:
+	$(call submake, release)
 	@echo
 
-.debug:
-	$(call submake, .debug)
+debug:
+	$(call submake, debug)
 	@echo
 
 clean:
 	$(call submake, clean)
-
-install:
-	$(call submake, install)
 
 #############################################################################

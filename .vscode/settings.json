@@ -3,5 +3,6 @@
         "unistd.h": "c"
     },
     "C_Cpp.dimInactiveRegions": false,
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    "C_Cpp.errorSquiggles": "disabled"
 }

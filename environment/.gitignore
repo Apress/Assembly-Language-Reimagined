@@ -1,8 +1,0 @@
-environment
-*.obj
-*.lst
-env
-random
-debug
-release
-.vscode

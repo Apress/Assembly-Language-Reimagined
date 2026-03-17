@@ -1,5 +1,0 @@
-# .gitignore
-*.obj
-.release
-.debug
-arrayDir
